@@ -190,7 +190,7 @@ function CA_ShareAchievement(achievementID)
         if gender > 1 then
             if gender == 2 then gender = 'MALE'
             else gender = 'FEMALE' end
-            local message = SexyLib:Localization('Classic Achievements'):Get('GOT_ACHIEVEMENT_MESSAGE_' .. gender, GetAchievementLink(achievementID))
+            local message = SexyLib:Localization(''):Get('GOT_ACHIEVEMENT_MESSAGE_' .. gender, GetAchievementLink(achievementID))
             if SexyLib:Util():IsInGuild() then SendChatMessage(message, 'GUILD') end
             if IsInRaid() then SendChatMessage(message, 'RAID')
             elseif IsInGroup() then SendChatMessage(message, 'PARTY')
