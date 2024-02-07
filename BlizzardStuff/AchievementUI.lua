@@ -27,7 +27,7 @@ local ACHIEVEMENTUI_FONTHEIGHT;						-- set in AchievementButton_OnLoad
 local ACHIEVEMENTUI_MAX_LINES_COLLAPSED = 3;		-- can show 3 lines of text when achievement is collapsed
 
 ACHIEVEMENTUI_DEFAULTSUMMARYACHIEVEMENTS = {1, 2, 3, 4, 5};
-ACHIEVEMENTUI_SUMMARYCATEGORIES = {1, 2, 5, 8, 9, 10, 14};
+ACHIEVEMENTUI_SUMMARYCATEGORIES = {1, 2, 5, 8, 9, 10};
 ACHIEVEMENTUI_DEFAULTGUILDSUMMARYACHIEVEMENTS = {5362, 4860, 4989, 4947};
 ACHIEVEMENTUI_GUILDSUMMARYCATEGORIES = {15088, 15077, 15078, 15079, 15080, 15089};
 
@@ -121,6 +121,7 @@ function AchievementFrame_DisplayComparison (unit)
 	if not unit then return end
 	local name = UnitName(unit)
 	if not name then return end
+	SexyLib:Logger('Classic Achievements'):LogInfoL('LOADING_TARGET_ACHIEVEMENTS', name)
 	GetAndProcessRemoteAchievementsCompletion(name, function(sender, completion)
 		CA_CompletionManager:SetTarget(completion)
 
@@ -133,7 +134,7 @@ function AchievementFrame_DisplayComparison (unit)
 		AchievementFrameComparison_SetUnit(unit);
 		AchievementFrameComparison_ForceUpdate();
 	end, function()
-		SexyLib:Logger('Classic Achievements'):LogErrorL('TARGET_DOES_NOT_HAVE_ADDON')
+		SexyLib:Logger('Classic Achievements'):LogErrorL('TARGET_DOES_NOT_HAVE_ADDON', name)
 	end)
 end
 
@@ -1318,9 +1319,9 @@ function AchievementButton_DisplayAchievement (button, category, achievement, se
 		end
 
 		if ( points > 0 ) then
-			button.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields]]);
+			button.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields]]);
 		else
-			button.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields-NoPoints]]);
+			button.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields-NoPoints]]);
 		end
 
 		if ( isGuild ) then
@@ -1685,10 +1686,10 @@ function AchievementObjectives_DisplayProgressiveAchievement (objectivesFrame, i
 		if ( points > 0 ) then
 			miniAchievement.points:SetText(points);
 			miniAchievement.points:Show();
-			miniAchievement.shield:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Progressive-Shield]]);
+			miniAchievement.shield:SetTexture([[Interface\AchievementFrame\UI-Achievement-Progressive-Shield]]);
 		else
 			miniAchievement.points:Hide();
-			miniAchievement.shield:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Progressive-Shield-NoPoints]]);
+			miniAchievement.shield:SetTexture([[Interface\AchievementFrame\UI-Achievement-Progressive-Shield-NoPoints]]);
 		end
 
 		miniAchievement.numCriteria = 0;
@@ -2381,9 +2382,9 @@ function AchievementFrameSummary_UpdateAchievements(...)
 			button.description:SetText(description);
 			AchievementShield_SetPoints(points, button.shield.points, GameFontNormal, GameFontNormalSmall);
 			if ( points > 0 ) then
-				button.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields]]);
+				button.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields]]);
 			else
-				button.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields-NoPoints]]);
+				button.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields-NoPoints]]);
 			end
 
 			if ( isGuild ) then
@@ -2428,9 +2429,9 @@ function AchievementFrameSummary_UpdateAchievements(...)
 					button.description:SetText(description);
 					AchievementShield_SetPoints(points, button.shield.points, GameFontNormal, GameFontNormalSmall);
 					if ( points > 0 ) then
-						button.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields]]);
+						button.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields]]);
 					else
-						button.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields-NoPoints]]);
+						button.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields-NoPoints]]);
 					end
 					button.shield.wasEarnedByMe = not (completed and not wasEarnedByMe);
 					button.shield.earnedBy = earnedBy;
@@ -3065,11 +3066,11 @@ function AchievementFrameComparison_DisplayAchievement (button, category, index)
 		friend.icon.texture:SetTexture(icon);
 
 		if ( points > 0 ) then
-			player.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields]]);
-			friend.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields]]);
+			player.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields]]);
+			friend.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields]]);
 		else
-			player.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields-NoPoints]]);
-			friend.shield.icon:SetTexture([[Interface\AddOns\ClassicAchievements\textures\UI-Achievement-Shields-NoPoints]]);
+			player.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields-NoPoints]]);
+			friend.shield.icon:SetTexture([[Interface\AchievementFrame\UI-Achievement-Shields-NoPoints]]);
 		end
 		AchievementShield_SetPoints(points, player.shield.points, ACHIEVEMENTCOMPARISON_PLAYERSHIELDFONT1, ACHIEVEMENTCOMPARISON_PLAYERSHIELDFONT2);
 		AchievementShield_SetPoints(points, friend.shield.points, ACHIEVEMENTCOMPARISON_FRIENDSHIELDFONT1, ACHIEVEMENTCOMPARISON_FRIENDSHIELDFONT2);

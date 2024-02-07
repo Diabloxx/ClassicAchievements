@@ -1,62 +1,49 @@
-## Interface: 20503
+## Interface: 11500
 ## Title: Classic Achievements
 ## Notes: Introduces achievements for WoW Classic
 ## Notes-ruRU: Добавляет достижения в мир WoW Classic
 ## Author: Konstantin Shandurenko
-## Version: 1.1.4.0
-## RequiredDeps: SexyLib-Network, SexyLib-Localization
+## Version: 2.0.3
+## RequiredDeps: SexyLib-Network, SexyLib-Localization, LibStub, LibDeflate
 ## OptionalDeps: DBM-Core, ElvUI, Bartender4
 ## SavedVariables: CA_Settings
-## SavedVariablesPerCharacter: CA_LocalData, CA_Flags
-
-#@no-lib-strip@
-Libs\libs.xml
-#@end-no-lib-strip@
+## SavedVariablesPerCharacter: CA_LocalData, CA_FirstLogin
 
 localization/stubs.lua
 localization/en.lua
 localization/ru.lua
 localization/fr.lua
 
-DB/AreaTable.lua
-DB/AreaTableLocale_ruRU.lua
-DB/AreaTableLocale_frFR.lua
-DB/AreaTableLocale_enUS.lua
+db/AreaTable.lua
+db/AreaTableLocale_ruRU.lua
+db/AreaTableLocale_frFR.lua
+db/AreaTableLocale_enUS.lua
 
-Settings.lua
+util/Settings.lua
 
-structures/Completion.lua
-structures/Achievements.lua
-structures/Criterias.lua
-KillingTracker.lua
-Triggers.lua
-ChatLink.lua
+api/Completion.lua
+api/Achievements.lua
+api/Criterias.lua
+util/KillingTracker.lua
+util/Triggers.lua
+util/ChatLink.lua
 
-Data/Loader.lua
-Data/vanilla_1.lua
-Data/vanilla_2.lua
-Data/tbc_general.lua
-Data/tbc_quests.lua
-Data/tbc_pve.lua
-Data/tbc_reputations.lua
-Data/tbc_exploration.lua
-Data/tbc_professions.lua
-Data/tbc_pvp.lua
-Data/tbc_pve_2.lua
-Data/Guild.lua
-Data/PostLoad.lua
+data/Loader.lua
+data/1.lua
+data/2.lua
+data/PostLoad.lua
 
+util/Minimap.lua
+
+BlizzardStuff/Microbutton.xml
+BlizzardStuff/Microbutton.lua
 BlizzardStuff/ApiMocks.lua
 BlizzardStuff/AchievementUtil.lua
 BlizzardStuff/AchievementUI.lua
 BlizzardStuff/AchievementUI.xml
 
-BlizzardStuff/Microbutton.xml
-BlizzardStuff/Microbutton.lua
-Minimap.lua
+util/Network.lua
+util/Comparison.lua
 
-Network.lua
-Comparison.lua
-
-Integrations/DBM.lua
-Integrations/Bartender4.lua
+integrations/DBM.lua
+integrations/Bartender4.lua

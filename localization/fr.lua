@@ -79,9 +79,8 @@ SexyLib:Localization('Classic Achievements'):Add({
     AC_MOB_KILLS = 'A vaincu %d monstres.',
 	
 	AN_UNARMED_SKILL = 'Qui a commandé une salade de phalanges ?',
-    AD_UNARMED_SKILL = 'Obtenir un score de 350 avec la compétence Mains nues.',
-	SKILL_UNARMED = 'Mains nues',
-    SKILL_RIDING = 'Monte',
+    AD_UNARMED_SKILL = 'Obtenir un score de 300 avec la compétence Mains nues.',
+	SKILL_UNARMED = 'Unarmed',
 	
 	AN_UNCOMMON_GEAR = 'Plus si ordinaire',
     AD_UNCOMMON_GEAR = 'S\'équiper d’un objet de qualité inhabituel ou supérieure dans chaque emplacement.',
@@ -128,7 +127,7 @@ SexyLib:Localization('Classic Achievements'):Add({
 	AN_QUESTS_ZONE = 'Quêtes de %s',
     AD_QUESTS_ZONE = 'Achever la quête "%s" dans %s.',
     AD_QUESTS_ZONE_MULTI = 'Achever les suites de quêtes dans %s listées ci-dessous.',
-    AC_QUESTS_ZONE = '%s',
+    AC_COMPLETED_QUEST = '%s',
 	
 	-- Kalimdor sub-category
     AN_WISDOM_KEEPER_KALIMDOR = 'Maître des traditions de Kalimdor',
@@ -558,7 +557,7 @@ SexyLib:Localization('Classic Achievements'):Add({
 	
 	AN_ALTERAC_WIN = 'Victoire dans la vallée d\'Alterac',
     AD_ALTERAC_WIN = 'Gagner dans la vallée d\'Alterac.',
-    AN_ALTERAC_WINS = 'Alterac Valley Veteran',
+    AN_ALTERAC_WINS = '%d victoires dans la vallée d\'Alterac',
     AD_ALTERAC_WINS = 'A gagné %d victoires dans la vallée d\'Alterac.',
 	
 	AN_ALTERAC_KILLING_BLOWS = 'Valley Meat Grinder',
@@ -612,7 +611,7 @@ SexyLib:Localization('Classic Achievements'):Add({
 	
 	AN_WARSONG_WIN = 'Victory in the Gulch',
     AD_WARSONG_WIN = 'Win the battle for Warsong Gulch.',
-    AN_WARSONG_WINS = 'Warsong Gulch Veteran',
+    AN_WARSONG_WINS = '%d victories in the Gulch',
     AD_WARSONG_WINS = 'Win %d battles for Warsong Gulch.',
 	
 	AN_WARSONG_KILLS = 'Military honor',
@@ -648,7 +647,7 @@ SexyLib:Localization('Classic Achievements'):Add({
 	
 	AN_ARATHI_WIN = 'Victory in the Basin',
     AD_ARATHI_WIN = 'Win the battle for Arathi Basin.',
-    AN_ARATHI_WINS = 'Arathi Basin Veteran',
+    AN_ARATHI_WINS = '%d victories in the Basin',
     AD_ARATHI_WINS = 'Win %d battles for Arathi Basin.',
 	
 	AN_ARATHI_BASE_ASSAULT = 'Conquistador',
@@ -692,7 +691,6 @@ SexyLib:Localization('Classic Achievements'):Add({
     PROF_HERBALISM = 'Herboristerie',
     PROF_MINING = 'Minage',
     PROF_SKINNING = 'Dépeçage',
-    PROF_JEWELCRAFTING = 'Joaillerie',
 	
 	AN_PROFS_SECONDARY = 'Boulots alimentaires',
     AD_PROFS_SECONDARY = 'Obtenir 300 points de compétence en pêche, secourisme et cuisine.',
@@ -949,14 +947,5 @@ SexyLib:Localization('Classic Achievements'):Add({
 
     AN_THANKS = 'Je suis moi-même, tu sais, un développeur',
     AD_THANKS = 'A été particulièrement utile pour développer, tester, traduire ou promouvoir Classic Achievements.',
-    AR_THANKS = 'Une gratitude infinie :)',
-
-    AN_RIDING_75 = 'En selle !',
-    AD_RIDING_75 = 'Apprendre la compétence Apprenti cavalier.',
-    AN_RIDING_150 = 'L\'équipée sauvage',
-    AD_RIDING_150 = 'Apprendre la compétence Compagnon cavalier.',
-    AN_RIDING_225 = 'La charge héroïque',
-    AD_RIDING_225 = 'Apprendre la compétence Expert cavalier.',
-    AN_RIDING_300 = 'Les fous du volant',
-    AD_RIDING_300 = 'Apprendre la compétence Maître cavalier.'
+    AR_THANKS = 'Une gratitude infinie :)'
 })
