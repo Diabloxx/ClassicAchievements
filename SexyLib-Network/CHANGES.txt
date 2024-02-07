@@ -1,0 +1,12 @@
+tag faa64c9f8ab5194a9168719b6b51728ab115f971 tbc2
+Author:	Konstantin Shandurenko <iam@kostya.sexy>
+Date:	Tue Jun 1 11:19:17 2021 +0300
+
+tbc2
+
+commit 238f97321a37856050765ed007744b36baeda13b
+Author: Konstantin Shandurenko <iam@kostya.sexy>
+Date:   Thu May 27 15:00:53 2021 +0300
+
+    Dependencies rework
+

@@ -1,0 +1,12 @@
+tag 1f2d99674988e2d84fd49e9026e78af5406e57d1 tbc
+Author:	Konstantin Shandurenko <iam@kostya.sexy>
+Date:	Sun May 9 15:47:37 2021 +0300
+
+tbc
+
+commit d63e36fcaba9bfab35f5af80d875747a9c231edc
+Author: Konstantin Shandurenko <iam@kostya.sexy>
+Date:   Sun May 9 15:47:13 2021 +0300
+
+    TBCC
+
